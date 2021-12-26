@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: biswaazuredevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: biswaazuredevops
+  template:
+    metadata:
+      labels:
+        app: biswaazuredevops 
+    spec:
+      containers:
+        - name: biswaazuredevops 
+          image: demoaksdevopsacr.azurecr.io/biswaazuredevops
+          ports:
+          - containerPort: 80
